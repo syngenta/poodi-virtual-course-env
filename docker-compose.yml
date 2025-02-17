@@ -1,0 +1,11 @@
+services:
+  poodi_virtual:
+    build: .
+    command: /bin/bash
+    tty: true
+    volumes:
+      # Mount the workspace volume to the workspace directory in the container.
+      - poodi_virtual:/home/vscode/poodi_virtual:nocopy
+
+volumes:
+  poodi_virtual:
